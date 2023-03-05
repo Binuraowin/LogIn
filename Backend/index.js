@@ -13,13 +13,14 @@ app.use(express.json());
 
 app.use(cors());
 
+const connectDB = require("./app/config/connect_db");
+connectDB();
+
 
 
 app.use(
-  "/api/movie-list",
-  (req, res, next) =>{
-    APIRouter
-  }
+  "/api",
+  APIRouter
 );
 
 

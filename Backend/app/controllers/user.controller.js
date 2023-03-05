@@ -10,11 +10,10 @@ exports.me = asyncHandler(async (req, res) => {
 
 exports.createUser = asyncHandler(async (req, res) => {
   User.create({
-    level: req.body.level,
-    feedback: req.body.feedback,
-    description: req.body.description,
-    customer: req.body.customer,
-    review: req.body.review,
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email: req.body.email,
+    password: req.body.password,
   })
     .then(async (user) => {
       return makeResponse(res, 200, true, user, "user recorded successfully");
