@@ -37,7 +37,7 @@ export default function Login() {
       setEmail('')
       setPassword('')
       console.log('user fetched:', json)
-      navigate("/success")
+      navigate(`/details/${json.data._id}`)
     }
 
   }

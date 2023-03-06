@@ -7,5 +7,7 @@ const UserRouter = express.Router();
 UserRouter.get("/me", UserController.me);
 UserRouter.post("/",UserValidator.create, UserController.createUser);
 UserRouter.post("/signup", UserValidator.findBy ,UserController.signUp);
+UserRouter.put("/:userId", UserValidator.create, UserController.update);
+UserRouter.get("/:userId", UserController.findOne);
 
 module.exports = UserRouter;

@@ -40,3 +40,27 @@ exports.signUp = asyncHandler(async (req, res) => {
       next(err);
     });
 });
+
+exports.update = (req, res, next) => {
+  User.findOneAndUpdate({ _id: req.params.userId }, req.body).lean({ defaults: true })
+    .then((user) => {
+      User.findOne({ _id: user._id }).then((newUser) => {
+        return makeResponse(res, 200, newUser ? true : false, newUser, newUser ? "Update User" : "User not found");
+      });
+    })
+    .catch((err) => {
+      console.log("internal-error", err.message ? err.message : err)
+      next(err);
+    });
+};
+
+exports.findOne = (req, res, next) => {
+  User.findOne({ _id: req.params.userId }).lean({ defaults: true })
+    .then((user) => {
+      return makeResponse(res, 200, user ? true : false, user, user ? "Specific User" : "User not found");
+    })
+    .catch((err) => {
+      console.log("internal-error", err.message ? err.message : err)
+      next(err);
+    });
+};
