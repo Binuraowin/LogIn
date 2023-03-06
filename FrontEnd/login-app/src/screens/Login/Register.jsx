@@ -67,7 +67,7 @@ export default function Register() {
               onChange={(e) => setFirstName(e.target.value)}
               value={firstName}
               type="text"
-              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-zinc-500 focus:ring-zinc-500 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
           <div className="mb-2">
@@ -80,7 +80,7 @@ export default function Register() {
               onChange={(e) => setLastName(e.target.value)}
               value={lastName}
               type="text"
-              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-zinc-500 focus:ring-zinc-500 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
           <div className="mb-2">
@@ -93,7 +93,7 @@ export default function Register() {
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               type="email"
-              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-zinc-500 focus:ring-zinc-500 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
           <div className="mb-2">
@@ -106,7 +106,7 @@ export default function Register() {
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               type="password"
-              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-zinc-500 focus:ring-zinc-500 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
           <div className="mb-2">
@@ -119,7 +119,7 @@ export default function Register() {
               onChange={(e) => setconfirmPassowrd(e.target.value)}
               value={confirmPassowrd}
               type="password"
-              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-zinc-500 focus:ring-zinc-500 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
           <div className="mt-6">
@@ -127,7 +127,7 @@ export default function Register() {
               // onClick={() => {
               //   handleSubmit();
               // }}
-              className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-zinc-500 rounded-md hover:bg-zinc-600 focus:outline-none focus:bg-zinc-600">
+              className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-cyan-500 rounded-md hover:bg-cyan-600 focus:outline-none focus:bg-cyan-600">
               Sign Up
             </button>
           </div>
