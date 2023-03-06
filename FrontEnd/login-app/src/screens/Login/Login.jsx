@@ -37,7 +37,12 @@ export default function Login() {
       setEmail('')
       setPassword('')
       console.log('user fetched:', json)
-      navigate(`/details/${json.data._id}`)
+      if(json.data.role === "admin"){
+        navigate(`user_list`)
+      }else{
+        navigate(`/details/${json.data._id}`)
+      }
+      
     }
 
   }
