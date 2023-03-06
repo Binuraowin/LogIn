@@ -37,6 +37,7 @@ export default function Login() {
       setEmail('')
       setPassword('')
       console.log('user fetched:', json)
+      navigate("/success")
     }
 
   }
@@ -63,7 +64,7 @@ export default function Login() {
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               type="email"
-              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-zinc-500 focus:ring-zinc-500 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
           <div className="mb-2">
@@ -86,12 +87,12 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               type="password"
-              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-zinc-500 focus:ring-zinc-500 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-zinc-500 bg-white border rounded-md focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
           <div className="mt-6">
             <button
-              className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-zinc-500 rounded-md hover:bg-zinc-600 focus:outline-none focus:bg-zinc-600">
+              className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-cyan-500 rounded-md hover:bg-cyan-600 focus:outline-none focus:bg-cyan-600">
               Login
             </button>
           </div>
@@ -105,7 +106,7 @@ export default function Login() {
             onClick={() => {
               onSignUpClick();
             }}
-            className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-zinc-500 rounded-md hover:bg-zinc-600 focus:outline-none focus:bg-zinc-600">
+            className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-cyan-500 rounded-md hover:bg-cyan-600 focus:outline-none focus:bg-cyan-600">
             Sign Up
           </button>
         </div>
