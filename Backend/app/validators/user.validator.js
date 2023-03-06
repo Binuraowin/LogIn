@@ -31,12 +31,10 @@ exports.create = async (req, res, next) => {
 exports.findBy = async (req, res, next) => {
   const result = await performValidator(
     {
-      first_name: Joi.string().optional().allow(null),
-      last_name: Joi.string().optional().allow(null),
       email: Joi.string()
         .email({ tlds: { allow: false } })
-        .required(),
-        password: Joi.string().required(),
+        .optional(),
+        password: Joi.string().optional(),
     },
     req.query,
   );

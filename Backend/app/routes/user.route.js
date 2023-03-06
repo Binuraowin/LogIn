@@ -6,6 +6,6 @@ const UserRouter = express.Router();
 
 UserRouter.get("/me", UserController.me);
 UserRouter.post("/",UserValidator.create, UserController.createUser);
-UserRouter.post("/signup", UserController.signUp);
+UserRouter.post("/signup", UserValidator.findBy ,UserController.signUp);
 
 module.exports = UserRouter;

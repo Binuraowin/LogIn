@@ -45,6 +45,7 @@ export default function Register() {
       setPassword('')
       setconfirmPassowrd('')
       console.log('new user added:', json)
+      navigate("/")
     }
 
   }
