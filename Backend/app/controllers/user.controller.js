@@ -14,6 +14,7 @@ exports.createUser = asyncHandler(async (req, res) => {
     last_name: req.body.last_name,
     email: req.body.email,
     password: req.body.password,
+    role: req.body.password || "Admin"
   })
     .then(async (user) => {
       return makeResponse(res, 200, true, user, "user recorded successfully");
@@ -58,6 +59,17 @@ exports.findOne = (req, res, next) => {
   User.findOne({ _id: req.params.userId }).lean({ defaults: true })
     .then((user) => {
       return makeResponse(res, 200, user ? true : false, user, user ? "Specific User" : "User not found");
+    })
+    .catch((err) => {
+      console.log("internal-error", err.message ? err.message : err)
+      next(err);
+    });
+};
+
+exports.findAll = (req, res, next) => {
+  User.find().lean({ defaults: true })
+    .then((users) => {
+      return makeResponse(res, 200, true, users, "All Users");
     })
     .catch((err) => {
       console.log("internal-error", err.message ? err.message : err)

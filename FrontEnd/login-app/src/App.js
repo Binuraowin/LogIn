@@ -8,6 +8,7 @@ import Details from './screens/Login/Details';
 import Login from './screens/Login/Login';
 import Register from './screens/Login/Register';
 import Success from './screens/Login/Success';
+import UsersList from './screens/Login/UserList';
 
 
 const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       <Route path="signup" element={<Register />} />
       <Route path="success" element={<Success />} />
       <Route path="details/:id" element={<Details />} />
+      <Route path="user_list" element={<UsersList />} />
     </Route>
   )
 )
